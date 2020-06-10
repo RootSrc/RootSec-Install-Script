@@ -12,6 +12,40 @@ ________________________________________________________________________
     [+] https://github.com/ropnop/kerbrute
 
     [+] https://github.com/longld/peda
+    
+    [+] https://github.com/v1s1t0r1sh3r3/airgeddon
+    
+    [+] https://github.com/BloodHoundAD/BloodHound
+
+    [+] https://github.com/MS3FGX/Bluelog
+    
+    [+] https://github.com/MisterBianco/BoopSuite
+    
+    [+] https://github.com/cheetz/brutescrape
+    
+    [+] https://github.com/Dionach/CMSmap
+    
+    [+] https://github.com/byt3bl33d3r/CrackMapExec
+    
+    [+] https://github.com/elceef/dnstwist
+    
+    [+] https://github.com/threatexpress/domainhunter
+    
+    [+] https://github.com/dafthack/DomainPasswordSpray
+    
+    [+] https://github.com/TheWover/donut
+    
+    [+] https://github.com/droope/droopescan
+    
+    [+] https://github.com/cheetz/Easy-P
+    
+    [+] https://github.com/exiftool/exiftool
+    
+    [+] https://github.com/AonCyberLabs/Windows-Exploit-Suggester
+    
+    [+] https://github.com/jondonas/linux-exploit-suggester-2
+    
+    [+] https://github.com/rebootuser/LinEnum
 }
 
 
