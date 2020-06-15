@@ -107,13 +107,13 @@ def install_git_repo():
 	Install Apt Packages and sources
 '''
 def install_sources():
-	Color.log('Writing GPG keys and Installing Kali/Parrot Sources..')
+	Color.log('Writing GPG keys and Installing Kali Sources..')
 	try:
 		Color.write('	{?} Attempting to install Kali Sources..\n\n')
 		os.system('apt-key adv --keyserver hkp://keys.gnupg.net --recv-keys 7D8D0BF6')
-		os.system('wget -qO - https://archive.parrotsec.org/parrot/misc/parrotsec.gpg | apt-key add -')
+		#os.system('wget -qO - https://archive.parrotsec.org/parrot/misc/parrotsec.gpg | apt-key add -')
 		f = open('/etc/apt/sources.list.d/rootsec-kali.list', 'w')
-		f.write('# Installed By RootSec Install Script\ndeb http://http.kali.org/kali kali-rolling main non-free contrib \ndeb https://deb.parrot.sh/parrot/ rolling main contrib non-free\ndeb https://deb.parrot.sh/parrot/ rolling-security main contrib non-free')
+		f.write('# Installed By RootSec Install Script\ndeb http://http.kali.org/kali kali-rolling main non-free contrib')
 		f.close()
 		os.system('apt-get update -o Dir::Etc::sourcelist="sources.list.d/rootsec-kali.list" -o Dir::Etc::sourceparts="-" -o apt::Get::List-Cleanup="0"')
 		Color.log('Completed installing of Kali Sources..')
