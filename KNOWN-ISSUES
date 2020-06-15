@@ -1,0 +1,2 @@
+[-] ---> Installing apt / meta packages might bring a "libc6-dev: Breaks: libgcc-8-dev"
+    [+] -- Fix for it is to install 'gcc-8-base', ```apt-get install gcc-8-base``` 
