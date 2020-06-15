@@ -25,7 +25,7 @@ def ask(question):
 def install_sec_list():
 	Color.println('	{?} Where would you like to install the sources? : ')
 	location = input('')
-	if ask('use this location: %s' % location)
+	if ask('use this location: %s' % location):
 		os.mkdir(location)
 		os.system('wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O {0}/SecList.zip && unzip {0}/SecList.zip -d {0} && rm -f {0}/SecList.zip'.format(location))
 	return
