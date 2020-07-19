@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# Borrowed Respectably from the Wifite Project :) 
 
 import sys, logging, re
 
@@ -155,6 +156,4 @@ if __name__ == '__main__':
     Color.write('{C}Testing{P}String{W}')
     Color.write('{+} Good line')
     Color.write('{!} Danger')
-    #logging.info(Color.strip('{W} Test')
-    #Color.pexception('Error Poteitnnjansdn')
 
