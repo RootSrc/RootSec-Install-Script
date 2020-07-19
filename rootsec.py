@@ -28,6 +28,9 @@ def install_sec_list():
 	if ask('use this location: %s' % location):
 		os.mkdir(location)
 		os.system('wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O {0}/SecList.zip && unzip {0}/SecList.zip -d {0} && rm -f {0}/SecList.zip'.format(location))
+	else:
+		Color.write('\n {!} Cancelling')
+		return
 	return
 
 '''
@@ -111,7 +114,6 @@ def install_sources():
 	try:
 		Color.write('	{?} Attempting to install Kali Sources..\n\n')
 		os.system('apt-key adv --keyserver hkp://keys.gnupg.net --recv-keys 7D8D0BF6')
-		#os.system('wget -qO - https://archive.parrotsec.org/parrot/misc/parrotsec.gpg | apt-key add -')
 		f = open('/etc/apt/sources.list.d/rootsec-kali.list', 'w')
 		f.write('# Installed By RootSec Install Script\ndeb http://http.kali.org/kali kali-rolling main non-free contrib')
 		f.close()
@@ -126,7 +128,6 @@ def install_sources():
 def kali_metas():
 	clear()
 	banner()
-	Color.write('	{!} For now this is all the Meta Packages that could be found / or are useful, until I update it.')
 	options = [('99', 'Continue')]
 
 	from core.metapackages import packages
@@ -294,13 +295,12 @@ def main():
 	if ask('install Kali Meta Packages'):
 		kali_metas()
 
-	if ask('install potentially extra Tools?'):
+	if ask('install extra Tools?'):
 		install_git_repo()
 	print('\n\n')
 
 '''
 	Exit prog gracefully,
-		- TODO: Clean Up anything, nothing right now
 '''
 def exit_gracefully(sig, frame):
 	clear()
